@@ -8,7 +8,7 @@ runtime! ftplugin/python.vim ftplugin/python_*.vim ftplugin/python/*.vim
 
 " Use cython to compile the file
 let g:cython_compile_options = get(g:, 'cython_compile_options', [
-      \ '--embed-position',
+      \ '--embed-positions',
       \ '--fast-fail',
       \])
 let &l:makeprg=printf(
