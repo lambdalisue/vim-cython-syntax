@@ -31,11 +31,10 @@ syntax match   cythonInclude  display '\<from\>\ze.*\<c\?import\>'
 " While Cython has a bit different syntax for for-loop, re-define pythonRepeat
 " as cythonRepeat to support 'from' and 'from ... by' syntax
 syntax clear   pythonRepeat
-syntax keyword cythonRepeat while
-syntax keyword cythonRepeat contained for from by
-syntax match   cythonRepeatCondition '\<for\>.*\<in\>.*:'           contains=cythonRepeat,pythonOperator
-syntax match   cythonRepeatCondition '\<for\>.*\<from\>.*:'         contains=cythonRepeat
-syntax match   cythonRepeatCondition '\<for\>.*\<from\>.*\<by\>.*:' contains=cythonRepeat
+syntax keyword cythonRepeat while for
+syntax keyword cythonRepeat contained from by
+syntax match   cythonRepeatCondition '\%(\<for\>\)\@<=.*\<from\>.*:'         contains=cythonRepeat
+syntax match   cythonRepeatCondition '\%(\<for\>\)\@<=.*\<from\>.*\<by\>.*:' contains=cythonRepeat
 
 " DEF ...
 " IF ... ELIF ... ELSE
