@@ -16,7 +16,7 @@ unlet b:current_syntax
 
 " C types
 syntax keyword cythonType const signed unsigned
-syntax keyword cythonType char short int long
+syntax keyword cythonType char short int long bint
 syntax keyword cythonType float double
 syntax keyword cythonType void object
 
