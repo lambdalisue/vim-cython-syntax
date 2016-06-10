@@ -42,7 +42,7 @@ syntax keyword cythonDefine DEF IF ELIF ELSE
 
 " ... nogil:
 " ... expect
-syntax match cythonStatement display '\<nogil:$'            containedin=cythonStatement
+syntax match cythonStatement display '\<nogil:\?$'          containedin=cythonStatement
 syntax match cythonStatement display '\<expect\ze?\?\>.*:$' containedin=cythonStatement
 
 " Typedef
