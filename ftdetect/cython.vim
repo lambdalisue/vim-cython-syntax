@@ -6,7 +6,7 @@ function! s:overwrite_filetype() abort
 endfunction
 
 " Cython
-" http://docs.cython.org/src/reference/language_basics.html
+" https://docs.cython.org/src/userguide/language_basics.html
 autocmd BufNewFile,BufRead *.pyx call s:overwrite_filetype()  " Implementation file
 autocmd BufNewFile,BufRead *.pxd call s:overwrite_filetype()  " Definition file
 autocmd BufNewFile,BufRead *.pxi call s:overwrite_filetype()  " Include files
