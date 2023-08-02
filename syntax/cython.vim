@@ -19,6 +19,7 @@ syntax keyword cythonType const signed unsigned
 syntax keyword cythonType char short int long bint
 syntax keyword cythonType float double
 syntax keyword cythonType void object
+syntax keyword cythonNull NULL
 
 " While Cython use 'from' in import/cimport, cdef-extern, and for-loop, it
 " could not be listed in 'pythonInclude' syntax as a keyword.
@@ -87,6 +88,7 @@ highlight default link cythonAccessor       cythonStatement
 highlight default link cythonFunction       pythonFunction
 highlight default link cythonDefine         Macro
 highlight default link cythonBuiltin        pythonBuiltin
+highlight default link cythonNull           pythonBuiltin
 
 highlight default link cythonDirective      pythonComment
 highlight default link cythonDirectiveTerms Define
